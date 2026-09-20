@@ -13,7 +13,7 @@ Requirements:
 Clone the repository and verify the project:
 
 ```sh
-git clone https://github.com/<owner>/rn-android-kit.git
+git clone https://github.com/Dheeeraj/rn-android-kit.git
 cd rn-android-kit
 npm ci
 npm run verify

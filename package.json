@@ -16,8 +16,7 @@
   "scripts": {
     "test": "node --test",
     "check": "node --check bin/rn.js && node --check src/cli.js && node --check src/project.js && node --check src/adb.js && node --check src/scrcpy.js && node --check src/android-package.js && node --check src/signing-report.js",
-    "verify": "npm run check && npm test && npm pack --dry-run --cache .npm-cache",
-    "prepublishOnly": "npm run verify"
+    "verify": "npm run check && npm test && npm pack --dry-run --cache .npm-cache"
   },
   "engines": {
     "node": ">=18"
@@ -36,11 +35,16 @@
   ],
   "author": "Dheeraj Rao",
   "license": "MIT",
+  "homepage": "https://github.com/Dheeeraj/rn-android-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dheeeraj/rn-android-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dheeeraj/rn-android-kit/issues"
+  },
   "os": [
     "darwin",
     "linux"
-  ],
-  "publishConfig": {
-    "access": "public"
-  }
+  ]
 }

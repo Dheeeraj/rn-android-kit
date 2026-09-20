@@ -12,18 +12,20 @@ Build, install, launch, debug, and mirror Android apps without remembering long 
 
 </div>
 
-## Install
+![rn-android-kit terminal demo](https://raw.githubusercontent.com/Dheeeraj/rn-android-kit/main/docs/terminal-demo.png)
 
-From npm after publication:
+## Install from GitHub
+
+With npm:
 
 ```sh
-npm install --global rn-android-kit
+npm install --global https://github.com/Dheeeraj/rn-android-kit.git
 ```
 
-Directly from GitHub:
+Or with Yarn Classic 1.x:
 
 ```sh
-npm install --global github:<owner>/rn-android-kit
+yarn global add https://github.com/Dheeeraj/rn-android-kit.git
 ```
 
 Then verify:
@@ -31,29 +33,6 @@ Then verify:
 ```sh
 rn --version
 rn --help
-```
-
-## The everyday workflow
-
-```mermaid
-flowchart LR
-    A["rn apk"] --> B["rn open"] --> C["rn install"] --> D["rn launch"] --> E["rn logs"]
-```
-
-```console
-$ rn apk
-Building APK with ./gradlew assembleRelease ...
-Built: /MyApp/android/app/build/outputs/apk/release/app-release.apk
-
-$ rn install
-Installing app-release.apk on Pixel 9 ...
-Success
-
-$ rn launch
-App launched.
-
-$ rn logs error
-Showing error+ logs for com.example.app on Pixel 9.
 ```
 
 ## Commands
@@ -168,12 +147,25 @@ brew install scrcpy
 
 ## Update or remove
 
+Update by running the same GitHub install command again:
+
 ```sh
-npm update --global rn-android-kit
-npm uninstall --global rn-android-kit
+npm install --global https://github.com/Dheeeraj/rn-android-kit.git
+# or, with Yarn Classic:
+yarn global add https://github.com/Dheeeraj/rn-android-kit.git
 ```
 
-For a GitHub installation, rerun the GitHub install command to update.
+Remove the CLI with the package manager you used:
+
+```sh
+npm uninstall --global rn-android-kit
+# or
+yarn global remove rn-android-kit
+```
+
+> [!NOTE]
+> Yarn 2 and newer removed `yarn global`. Use Yarn Classic 1.x for the global
+> Yarn command above, or use the npm-from-GitHub command.
 
 ## Development
 

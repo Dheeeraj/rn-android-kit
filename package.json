@@ -1,0 +1,46 @@
+{
+  "name": "rn-android-kit",
+  "version": "0.6.0",
+  "description": "A memorable Android CLI for React Native builds, artifacts, devices, logs, signing reports, and screen mirroring",
+  "type": "module",
+  "bin": {
+    "rn": "bin/rn.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check bin/rn.js && node --check src/cli.js && node --check src/project.js && node --check src/adb.js && node --check src/scrcpy.js && node --check src/android-package.js && node --check src/signing-report.js",
+    "verify": "npm run check && npm test && npm pack --dry-run --cache .npm-cache",
+    "prepublishOnly": "npm run verify"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "react-native",
+    "android",
+    "gradle",
+    "adb",
+    "cli",
+    "apk",
+    "aab",
+    "logcat",
+    "scrcpy",
+    "android-development"
+  ],
+  "author": "Dheeraj Rao",
+  "license": "MIT",
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
